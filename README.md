@@ -4,6 +4,7 @@ Save figure(graph) scripts for python3
 lossとかをグラフに図示したい時に使うと楽になりそうなスクリプト．
 内部的にはグラフタイトル＋凡例でデータを管理しています．
 
+![test.png](https://raw.githubusercontent.com/SeeLog/savefigutils/master/test.png "test")
 
 ## 使い方
 
