@@ -1,5 +1,3 @@
-import matplotlib
-matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 
@@ -63,6 +61,24 @@ class SaveFig():
         Keyword Arguments:
             figsize {tuple} -- 保存する画像サイズ (default: {(10, 4)})
         """
+        self.__setFig(figsize)
+        plt.savefig(filename, bbox_inches='tight')
+
+    def show(self, figsize=(10, 4)):
+        """グラフの表示を行う
+
+        Keyword Arguments:
+            figsize {tuple} -- 表示する画像サイズ (default: {(10, 4)})
+        """
+        self.__setFig(figsize)
+        plt.show()
+
+    def __setFig(self, figsize=(10, 4)):
+        """グラフの準備，外部から呼ばないことを推奨(private methoc)
+
+        Keyword Arguments:
+            figsize {tuple} -- 画像サイズ (default: {(10, 4)})
+        """
 
         fig, tpl = plt.subplots(ncols=len(self.fig_data_dict), figsize=figsize)
 
@@ -77,5 +93,4 @@ class SaveFig():
             ax.grid(self.grid_dict[title])
             ax.legend()
 
-        plt.savefig(filename, bbox_inches='tight')
 
