@@ -1,12 +1,11 @@
 # savefigutils
-Save figure(graph) scripts for python3 and pytorch
+Save figure(graph) scripts for python3
 
 lossとかをグラフに図示したい時に使うと楽になりそうなスクリプト．
-
 内部的にはグラフタイトル＋凡例でデータを管理しています．
 
-## 使い方
 
+## 使い方
 
 `addColumn`でグラフタイトルとX軸Y軸ラベル設定
 
